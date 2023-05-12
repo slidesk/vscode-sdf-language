@@ -1,0 +1,25 @@
+{
+  "name": "sdf",
+  "displayName": "sdf",
+  "description": "SliDesk File",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "sdf",
+      "aliases": [" SliDesk Format", "sdf"],
+      "extensions": [".sdf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sdf",
+      "scopeName": "source.sdf",
+      "path": "./syntaxes/sdf.tmLanguage.json"
+    }]
+  }
+}

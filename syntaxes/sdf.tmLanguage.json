@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": " SliDesk Format",
+  "patterns": [
+    {
+      "include": "#urls"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#slide_title"
+    },
+    {
+      "include": "#title"
+    }
+  ],
+  "repository": {
+    "urls": {
+      "patterns": [
+        {
+          "name": "keyword.control.sdf",
+          "match": "(?:(?:https?|ftp|file)://|www.|ftp.)(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[A-Z0-9+&@#/%=~_|$])"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "begin": "/\\*",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.json"
+            }
+          },
+          "end": "\\*/",
+          "name": "comment.block.json"
+        },
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.json"
+            }
+          },
+          "match": "(//).*$\\n?",
+          "name": "comment.line.double-slash.js"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.sdf",
+          "match": "!image"
+        },
+        {
+          "name": "entity.name.tag.sdf",
+          "match": "!include"
+        },
+        {
+          "name": "variable.function.sdf",
+          "match": ":custom_(css|js|sv_js):"
+        }
+      ]
+    },
+    "slide_title": {
+      "name": "entity.name.section.sdf",
+      "begin": "## ",
+      "end": "\n"
+    },
+    "title": {
+      "name": "entity.name.section.sdf",
+      "begin": "# ",
+      "end": "\n"
+    }
+  },
+  "scopeName": "source.sdf"
+}
