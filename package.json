@@ -2,11 +2,12 @@
   "name": "sdf",
   "displayName": "sdf",
   "description": "SliDesk File",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
   },
+  "publisher": "gouz",
   "engines": {
     "vscode": "^1.78.0"
   },

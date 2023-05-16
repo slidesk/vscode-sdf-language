@@ -19,34 +19,35 @@
     }
   ],
   "repository": {
-    "urls": {
-      "patterns": [
-        {
-          "name": "keyword.control.sdf",
-          "match": "(?:(?:https?|ftp|file)://|www.|ftp.)(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[A-Z0-9+&@#/%=~_|$])"
-        }
-      ]
-    },
     "comments": {
       "patterns": [
         {
           "begin": "/\\*",
           "captures": {
             "0": {
-              "name": "punctuation.definition.comment.json"
+              "name": "punctuation.definition.comment.sdf"
             }
           },
           "end": "\\*/",
-          "name": "comment.block.json"
+          "name": "comment.block.sdf"
         },
         {
+          "begin": "/::",
           "captures": {
-            "1": {
-              "name": "punctuation.definition.comment.json"
+            "0": {
+              "name": "variable.function.sdf"
             }
           },
-          "match": "(//).*$\\n?",
-          "name": "comment.line.double-slash.js"
+          "end": "::/",
+          "name": "variable.function.sdf"
+        }
+      ]
+    },
+    "urls": {
+      "patterns": [
+        {
+          "name": "keyword.control.sdf",
+          "match": "(?:(?:https?|ftp|file)://|www.|ftp.)(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[A-Z0-9+&@#/%=~_|$])"
         }
       ]
     },
@@ -59,10 +60,6 @@
         {
           "name": "entity.name.tag.sdf",
           "match": "!include"
-        },
-        {
-          "name": "variable.function.sdf",
-          "match": ":custom_(css|js|sv_js):"
         }
       ]
     },
