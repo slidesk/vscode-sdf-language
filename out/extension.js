@@ -18,16 +18,13 @@ function getWebviewContent() {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+        html { width: 100%; height: 100%; min-height: 100%; display: flex; }
+        body { flex: 1; display: flex; }
+        iframe { flex: 1; border: none; }
       </style>
   </head>
   <body>
-      <iframe width="100%" height="100%" src="http://localhost:1337" frameborder="0" sandbox="allow-same-origin allow-scripts" />
+      <iframe src="http://localhost:1337" sandbox="allow-same-origin allow-scripts" />
   </body>
   </html>`;
 }
