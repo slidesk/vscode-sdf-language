@@ -7,7 +7,9 @@ export function activate(context: vscode.ExtensionContext) {
         "sdfPreview",
         "SliDesk: preview",
         vscode.ViewColumn.One,
-        {}
+        {
+          enableScripts: true,
+        }
       );
       panel.webview.html = getWebviewContent();
     })

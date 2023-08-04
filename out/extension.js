@@ -4,7 +4,9 @@ exports.activate = void 0;
 const vscode = require("vscode");
 function activate(context) {
     context.subscriptions.push(vscode.commands.registerCommand("sdf.openBrowser", () => {
-        const panel = vscode.window.createWebviewPanel("sdfPreview", "SliDesk: preview", vscode.ViewColumn.One, {});
+        const panel = vscode.window.createWebviewPanel("sdfPreview", "SliDesk: preview", vscode.ViewColumn.One, {
+            enableScripts: true,
+        });
         panel.webview.html = getWebviewContent();
     }));
 }
