@@ -1,8 +1,10 @@
 {
   "name": "sdf",
-  "displayName": "sdf",
-  "description": "SliDesk File",
-  "version": "0.0.2",
+  "displayName": "SliDesk Companion",
+  "description": "A nice companion for SliDesk writers",
+  "icon": "images/SD.png",
+  "main": "./out/extension.js",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
@@ -34,6 +36,24 @@
         "scopeName": "source.sdf",
         "path": "./syntaxes/sdf.tmLanguage.json"
       }
+    ],
+    "commands": [
+      {
+        "command": "sdf.openBrowser",
+        "title": "SliDesk: Launch a preview",
+        "category": "SliDesk: preview"
+      }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.25",
+    "@types/vscode": "^1.51.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   }
 }

@@ -35,11 +35,11 @@
           "begin": "/::",
           "captures": {
             "0": {
-              "name": "variable.function.sdf"
+              "name": "entity.name.section.sdf"
             }
           },
           "end": "::/",
-          "name": "variable.function.sdf"
+          "name": "entity.name.section.sdf"
         }
       ]
     },
@@ -63,13 +63,18 @@
         }
       ]
     },
+    "subslide_title": {
+      "name": "variable.function.sdf",
+      "begin": "### ",
+      "end": "\n"
+    },
     "slide_title": {
-      "name": "entity.name.section.sdf",
+      "name": "variable.function.sdf",
       "begin": "## ",
       "end": "\n"
     },
     "title": {
-      "name": "entity.name.section.sdf",
+      "name": "variable.function.sdf",
       "begin": "# ",
       "end": "\n"
     }
