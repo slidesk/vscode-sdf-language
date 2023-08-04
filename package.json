@@ -43,7 +43,17 @@
         "title": "SliDesk: Launch a preview",
         "category": "SliDesk: preview"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "SliDesk",
+      "properties": {
+        "sdf.port": {
+          "type": "number",
+          "default": 1337,
+          "description": "Port used for your SliDesk presentation"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

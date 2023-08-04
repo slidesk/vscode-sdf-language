@@ -29,7 +29,9 @@ function getWebviewContent() {
       </style>
   </head>
   <body>
-      <iframe src="http://localhost:1337" sandbox="allow-same-origin allow-scripts" />
+      <iframe src="http://localhost:${vscode.workspace
+        .getConfiguration("sdf")
+        .get("port")}" sandbox="allow-same-origin allow-scripts" />
   </body>
   </html>`;
 }
