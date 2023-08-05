@@ -4,7 +4,7 @@
   "description": "A nice companion for SliDesk writers",
   "icon": "images/SD.png",
   "main": "./extension.js",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
