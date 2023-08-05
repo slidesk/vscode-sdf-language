@@ -3,7 +3,7 @@
   "displayName": "SliDesk Companion",
   "description": "A nice companion for SliDesk writers",
   "icon": "images/SD.png",
-  "main": "./out/extension.js",
+  "main": "./extension.js",
   "version": "0.4.0",
   "repository": {
     "type": "git",
@@ -54,16 +54,5 @@
         }
       }
     }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
-  },
-  "devDependencies": {
-    "@types/node": "^8.10.25",
-    "@types/vscode": "^1.51.0",
-    "tslint": "^5.16.0",
-    "typescript": "^3.4.5"
   }
 }
