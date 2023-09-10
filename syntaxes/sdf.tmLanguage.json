@@ -35,19 +35,11 @@
           "begin": "/::",
           "captures": {
             "0": {
-              "name": "entity.name.section.sdf"
+              "name": "keyword.control.sdf"
             }
           },
           "end": "::/",
-          "name": "entity.name.section.sdf"
-        }
-      ]
-    },
-    "urls": {
-      "patterns": [
-        {
-          "name": "keyword.control.sdf",
-          "match": "(?:(?:https?|ftp|file)://|www.|ftp.)(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:([-A-Z0-9+&@#/%=~_|$?!:,.]*)|[A-Z0-9+&@#/%=~_|$])"
+          "name": "keyword.control.sdf"
         }
       ]
     },

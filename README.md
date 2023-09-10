@@ -11,15 +11,15 @@ Language for SliDesk (https://github.com/gouz/slidesk)
 
 !include(another_file)
 
-_italic_
+__italic__
 
-*bold*
+**bold**
 
-`code`
+``code``
 
-˜underline˜
+˜˜underline˜˜
 
-=line through=
+==line through==
 
 !image(path or url | html attributes)
 
