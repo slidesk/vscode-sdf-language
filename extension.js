@@ -12,18 +12,47 @@ function activate(context) {
         }
       );
       panel.webview.html = getWebviewContent();
+      // check text changes
+      vscode.workspace.onDidSaveTextDocument((document) => {
+        let activeEditor = vscode.window.activeTextEditor;
+        const { text } = activeEditor.document.lineAt(
+          activeEditor.selection.active.line
+        );
+        const lines = document.getText().split("\n");
+        const currentline = lines.indexOf(text);
+        let cpt = 0;
+        let next = 0;
+        let slideTitle = "";
+        do {
+          if (lines[cpt].startsWith("## ") && cpt <= currentline) {
+            if (lines[cpt] !== "## ") {
+              slideTitle = lines[cpt];
+              next = 0;
+            } else next = next + 1;
+          }
+          cpt++;
+        } while (cpt < lines.length);
+        const slug = slideTitle
+          .replace("## ", "")
+          .toLowerCase()
+          .trim()
+          .replace(/[^\w\s-]/g, "")
+          .replace(/[\s_-]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+        panel.webview.html = getWebviewContent(`${slug}+${next}`);
+      });
     })
   );
 }
 
-function getWebviewContent() {
+function getWebviewContent(hashtag) {
   return `<!DOCTYPE html>
       <html lang="en">
       <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <style>
-            html { width: 100%; height: 100%; min-height: 100%; display: flex; }
+            html { height: 100vh; min-height: 100vh; display: flex; }
             body { flex: 1; display: flex; }
             iframe { flex: 1; border: none; }
           </style>
@@ -31,7 +60,9 @@ function getWebviewContent() {
       <body>
           <iframe src="http://localhost:${vscode.workspace
             .getConfiguration("sdf")
-            .get("port")}" sandbox="allow-same-origin allow-scripts" />
+            .get(
+              "port"
+            )}#${hashtag}" sandbox="allow-same-origin allow-scripts" />
       </body>
       </html>`;
 }
