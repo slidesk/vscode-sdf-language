@@ -14,12 +14,9 @@ function activate(context) {
       panel.webview.html = getWebviewContent();
       // check text changes
       vscode.workspace.onDidSaveTextDocument((document) => {
-        let activeEditor = vscode.window.activeTextEditor;
-        const { text } = activeEditor.document.lineAt(
-          activeEditor.selection.active.line
-        );
         const lines = document.getText().split("\n");
-        const currentline = lines.indexOf(text);
+        const currentline =
+          vscode.window.activeTextEditor.selection.active.line;
         let cpt = 0;
         let next = 0;
         let slideTitle = "";
