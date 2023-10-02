@@ -43,6 +43,7 @@ function activate(context) {
 }
 
 function getWebviewContent(hashtag) {
+  const config = vscode.workspace.getConfiguration("sdf");
   return `<!DOCTYPE html>
       <html lang="en">
       <head>
@@ -55,11 +56,9 @@ function getWebviewContent(hashtag) {
           </style>
       </head>
       <body>
-          <iframe src="http://localhost:${vscode.workspace
-            .getConfiguration("sdf")
-            .get(
-              "port"
-            )}#${hashtag}" sandbox="allow-same-origin allow-scripts" />
+          <iframe src="http://${config.get("host")}:${config.get(
+    "port"
+  )}#${hashtag}" sandbox="allow-same-origin allow-scripts" />
       </body>
       </html>`;
 }

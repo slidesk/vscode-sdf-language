@@ -4,7 +4,7 @@
   "description": "A nice companion for SliDesk writers",
   "icon": "images/SD.png",
   "main": "./extension.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
@@ -47,6 +47,11 @@
     "configuration": {
       "title": "SliDesk",
       "properties": {
+        "sdf.host": {
+          "type": "string",
+          "default": "localhost",
+          "description": "Host used for your SliDesk presentation"
+        },
         "sdf.port": {
           "type": "number",
           "default": 1337,
