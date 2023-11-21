@@ -4,7 +4,7 @@
   "description": "A nice companion for SliDesk writers",
   "icon": "images/SD.png",
   "main": "./extension.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
@@ -56,6 +56,11 @@
           "type": "number",
           "default": 1337,
           "description": "Port used for your SliDesk presentation"
+        },
+        "sdf.https": {
+          "type": "boolean",
+          "default": false,
+          "description": "Is HTTPS used?"
         }
       }
     }
