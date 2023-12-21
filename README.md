@@ -1,6 +1,6 @@
 # SDF Language
 
-Language for SliDesk (https://github.com/gouz/slidesk)
+Language for SliDesk (https://github.com/slidesk/slidesk)
 
 ## Example and description
 
