@@ -1,71 +1,85 @@
 {
-  "name": "sdf",
-  "displayName": "SliDesk Companion",
-  "description": "A nice companion for SliDesk writers",
-  "icon": "images/slidesk.png",
-  "main": "./extension.js",
-  "version": "0.1.6",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gouz/vscode-sdf-language.git"
-  },
-  "publisher": "gouz",
-  "engines": {
-    "vscode": "^1.78.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "sdf",
-        "aliases": [
-          " SliDesk Format",
-          "sdf"
-        ],
-        "extensions": [
-          ".sdf"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "sdf",
-        "scopeName": "source.sdf",
-        "path": "./syntaxes/sdf.tmLanguage.json",
-        "injectTo": [
-          "text.html.markdown"
-        ]
-      }
-    ],
-    "commands": [
-      {
-        "command": "sdf.openBrowser",
-        "title": "SliDesk: Launch a preview",
-        "category": "SliDesk: preview"
-      }
-    ],
-    "configuration": {
-      "title": "SliDesk",
-      "properties": {
-        "sdf.host": {
-          "type": "string",
-          "default": "localhost",
-          "description": "Host used for your SliDesk presentation"
-        },
-        "sdf.port": {
-          "type": "number",
-          "default": 1337,
-          "description": "Port used for your SliDesk presentation"
-        },
-        "sdf.https": {
-          "type": "boolean",
-          "default": false,
-          "description": "Is HTTPS used?"
-        }
-      }
-    }
-  }
+	"name": "sdf",
+	"displayName": "SliDesk Companion",
+	"description": "A nice companion for SliDesk writers",
+	"icon": "images/slidesk.png",
+	"main": "./extension.js",
+	"version": "0.1.6",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gouz/vscode-sdf-language.git"
+	},
+	"publisher": "gouz",
+	"engines": {
+		"vscode": "^1.78.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "sdf",
+				"aliases": [
+					" SliDesk Format",
+					"sdf"
+				],
+				"extensions": [
+					".sdf"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "sdf",
+				"scopeName": "source.sdf",
+				"path": "./syntaxes/sdf.tmLanguage.json",
+				"injectTo": [
+					"text.html.markdown"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "sdf.openBrowser",
+				"title": "SliDesk: Launch a preview",
+				"category": "SliDesk: preview"
+			}
+		],
+		"configuration": {
+			"title": "SliDesk",
+			"properties": {
+				"sdf.host": {
+					"type": "string",
+					"default": "localhost",
+					"description": "Host used for your SliDesk presentation"
+				},
+				"sdf.port": {
+					"type": "number",
+					"default": 1337,
+					"description": "Port used for your SliDesk presentation"
+				},
+				"sdf.https": {
+					"type": "boolean",
+					"default": false,
+					"description": "Is HTTPS used?"
+				}
+			}
+		}
+	},
+	"__metadata": {
+		"id": "8148270c-17be-44be-a429-a4e545d5e815",
+		"publisherId": "a6cba740-d340-42a1-9e98-901d5f490e89",
+		"publisherDisplayName": "gouz",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1714295198214,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
 }
