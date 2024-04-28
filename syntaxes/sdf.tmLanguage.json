@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": " SliDesk Format",
+  "injectionSelector": "L:text.html.markdown",
   "patterns": [
     {
       "include": "#urls"
@@ -16,6 +17,9 @@
     },
     {
       "include": "#title"
+    },
+    {
+      "include": "text.html.markdown"
     }
   ],
   "repository": {
@@ -54,11 +58,6 @@
           "match": "!include"
         }
       ]
-    },
-    "subslide_title": {
-      "name": "variable.function.sdf",
-      "begin": "### ",
-      "end": "\n"
     },
     "slide_title": {
       "name": "variable.function.sdf",

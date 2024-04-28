@@ -4,7 +4,7 @@
   "description": "A nice companion for SliDesk writers",
   "icon": "images/SD.png",
   "main": "./extension.js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
@@ -34,7 +34,10 @@
       {
         "language": "sdf",
         "scopeName": "source.sdf",
-        "path": "./syntaxes/sdf.tmLanguage.json"
+        "path": "./syntaxes/sdf.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
       }
     ],
     "commands": [

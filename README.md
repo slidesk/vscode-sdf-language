@@ -2,29 +2,6 @@
 
 Language for SliDesk (https://github.com/slidesk/slidesk)
 
-## Example and description
+Install the markdown extension Markdown All in One
 
-```
-# Main title
-
-## Title of a new slide
-
-!include(another_file)
-
-__italic__
-
-**bold**
-
-``code``
-
-˜˜underline˜˜
-
-==line through==
-
-!image(path or url | html attributes)
-
-- list
--- sublist
--- sub
-- end of a list
-```
+https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
