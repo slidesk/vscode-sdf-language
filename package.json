@@ -2,9 +2,9 @@
   "name": "sdf",
   "displayName": "SliDesk Companion",
   "description": "A nice companion for SliDesk writers",
-  "icon": "images/SD.png",
+  "icon": "images/slidesk.png",
   "main": "./extension.js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/vscode-sdf-language.git"
