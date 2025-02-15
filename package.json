@@ -4,7 +4,7 @@
 	"description": "A nice companion for SliDesk writers",
 	"icon": "images/slidesk.png",
 	"main": "./extension.js",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/gouz/vscode-sdf-language.git"
@@ -13,20 +13,13 @@
 	"engines": {
 		"vscode": "^1.78.0"
 	},
-	"categories": [
-		"Programming Languages"
-	],
+	"categories": ["Programming Languages"],
 	"contributes": {
 		"languages": [
 			{
 				"id": "sdf",
-				"aliases": [
-					" SliDesk Format",
-					"sdf"
-				],
-				"extensions": [
-					".sdf"
-				],
+				"aliases": [" SliDesk Format", "sdf"],
+				"extensions": [".sdf", ".sdt"],
 				"configuration": "./language-configuration.json"
 			}
 		],
@@ -35,9 +28,7 @@
 				"language": "sdf",
 				"scopeName": "source.sdf",
 				"path": "./syntaxes/sdf.tmLanguage.json",
-				"injectTo": [
-					"text.html.markdown"
-				]
+				"injectTo": ["text.html.markdown"]
 			}
 		],
 		"commands": [
